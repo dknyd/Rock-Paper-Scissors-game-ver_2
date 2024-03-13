@@ -1,0 +1,212 @@
+:root {
+	/* Primary */
+	--scissors-gradient-start: hsl(39, 89%, 49%);
+	--scissors-gradient-end: hsl(40, 84%, 53%);
+
+	--paper-gradient-start: hsl(230, 89%, 62%);
+	--paper-gradient-end: hsl(230, 89%, 65%);
+
+	--rock-gradient-start: hsl(349, 71%, 52%);
+	--rock-gradient-end: hsl(349, 70%, 56%);
+
+	--lizard-gradient-start: hsl(261, 73%, 60%);
+	--lizard-gradient-end: hsl(261, 72%, 63%);
+
+	--cyan-start: hsl(189, 59%, 53%);
+	--cyan-end: hsl(189, 58%, 57%);
+
+	/* Neutral */
+	--dark-text-color: hsl(229, 25%, 31%);
+	--score-text-color: hsl(229, 64%, 46%);
+	--header-outline-color: hsl(217, 16%, 45%);
+
+	/* Background */
+	--background-radial-gradient-start: hsl(214, 47%, 23%);
+	--background-radial-gradient-end: hsl(237, 49%, 15%);
+}
+
+* {
+	font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+body {
+	height: 100%;
+	margin: 0px;
+	background: radial-gradient(at top, var(--background-radial-gradient-start), var(--background-radial-gradient-end));
+}
+
+html {
+	height: 100%;
+	width: 100vw;
+	overflow-x: hidden;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.winner{
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Green glow effect */
+}
+
+.btn {
+  width: 10rem;
+}
+
+
+/* SCOREBOARD */
+
+.container__scoreBoard {
+	display: flex;
+	justify-content: space-between;
+	margin-left: 15%;
+	margin-right: 15%;
+	border-radius: 0.5rem;
+	border: 3px solid grey;
+	padding: 1rem;
+	font-weight: 700;
+	width: 40rem;
+
+}
+
+.container__gameTitle {
+	width: 5rem;
+	color: white;
+}
+
+.container__score {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: white;
+	padding: 0rem 2rem;
+	border-radius: 0.5rem;
+}
+
+.text__score {
+	color: var(--score-text-color);
+	font-weight: 600;
+	font-size: 0.8rem;
+	margin-top: 0.5rem;
+}
+
+.number__score {
+	margin-top: -1rem;
+	font-size: 3rem;
+	color: var(--dark-text-color);
+}
+
+
+/* STEP1 CHOICES */
+.containerChoices {
+	display: grid;
+	grid-template-columns: repeat(3, 8rem);
+  gap: 1rem;
+	justify-content: center;
+	
+	width: 100%;
+	height: 20rem;
+	background-image: url('images/bg-triangle.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.container__choice {
+	background-color: white;
+	/* width: 8rem;
+	height: 8rem; */
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1rem solid;
+	padding: 1rem;
+	box-shadow: 0px 10px 20px inset;
+}
+
+.container__choice:hover {
+	cursor: pointer;
+	transform: scale(1.05);
+	-webkit-filter: brightness(110%);
+	transition: linear .15s;
+}
+
+.paper {
+	border-color: var(--paper-gradient-start);
+}
+
+.scissors {
+	border-color: var(--scissors-gradient-start);
+}
+
+.rock {
+	margin-top: 12rem;
+	border-color: var(--rock-gradient-start);
+}
+
+
+/* STEP2 MATCH */
+.container__match {
+	width: 80%;
+	display: flex;
+	justify-content: space-around;
+
+}
+
+.chosen {
+	margin-top: 0px;
+}
+
+.chosen:hover {
+	cursor: default;
+	transform: scale(1);
+	-webkit-filter: brightness(100%);
+}
+
+/* STEP3 RESULT */
+.container__match {
+	display: flex;
+}
+
+
+
+.you,
+.result {
+	color: white;
+	font-size: 3rem;
+	font-weight: 700;
+	text-align: center;
+}
+
+.buttton__playAgain {
+	font-weight: 800;
+	padding: 0rem 2rem;
+	color: var(--dark-text-color);
+	border-radius: 0.2rem;
+}
+
+.buttton__playAgain:hover {
+	cursor: pointer;
+	transform: scale(1.05);
+	-webkit-filter: brightness(110%);
+	transition: linear .15s;
+}
+
+
+.youPicked,
+.housePicked {
+	color: white;
+	font-size: 1rem;
+	justify-self: center;
+	text-align: center;
+	margin-bottom: 2rem;
+	font-weight: 700;
+}
+

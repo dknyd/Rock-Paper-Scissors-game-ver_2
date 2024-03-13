@@ -1,0 +1,52 @@
+@media screen and (max-width: 650px) {
+	.btn {
+		margin-right: auto !important;
+    width: 10rem;
+	}
+
+	.container__scoreBoard {
+		width: 80%;
+    margin-top: 2rem;
+	}
+
+	.chosen {
+		margin-top: 0px;
+		width: 8rem;
+		height: 8rem;
+	}
+
+  .containerChoices{
+    margin-top: 2rem;
+  }
+
+  .container__choice{
+    width: 7rem;
+    height: 7rem;
+  }
+
+  .container__match {
+    margin-top: 2rem;
+  }
+
+
+	/* STEP3 RESULT */
+	.container__match {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.container__pick__player,
+	.container__pick__computer {
+		justify-self: center;
+	}
+
+	.container__resultMatch {
+		grid-area: 2/1/3/3;
+		justify-self: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+
+}

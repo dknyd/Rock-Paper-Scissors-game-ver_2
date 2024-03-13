@@ -1,0 +1,40 @@
+@media screen and (min-width: 651px){
+  
+  .container__scoreBoard{
+    width: 40rem;
+    margin-top: 4rem;
+ }
+
+ .chosen{
+  margin-top: 0px;
+  width: 10rem;
+  height: 10rem;
+}
+
+
+.containerChoices{
+  margin-top: 5rem;
+}
+
+.container__choice{
+  width: 10rem;
+	height: 10rem;
+}
+
+.container__match {
+	margin-top: 5rem;
+}
+
+/* STEP3 RESULT */
+.container__match{
+  display: flex;
+  flex-direction: row;
+}
+
+.container__resultMatch{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+}
